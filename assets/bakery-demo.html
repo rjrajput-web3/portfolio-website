@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crumb &amp; Craft — Artisan Bakery, Chandigarh</title>
+<meta name="description" content="Crumb & Craft is a neighbourhood artisan bakery in Chandigarh. Sourdough, croissants and celebration cakes baked fresh every morning.">
+<style>
+  /* ============ Tokens ============ */
+  :root{
+    --cream:#FBF5EA;        /* page background */
+    --cream-2:#F5EAD6;      /* soft panel */
+    --brown:#3E2A1E;        /* headings / dark text */
+    --brown-2:#5C4232;      /* body text */
+    --amber:#C67B2E;        /* primary accent */
+    --amber-dark:#A05F1C;   /* accent hover */
+    --gold:#E8B04B;         /* highlight */
+    --white:#FFFFFF;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(62,42,30,.10);
+    --max:1120px;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    background:var(--cream);
+    color:var(--brown-2);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--serif);color:var(--brown);line-height:1.25}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  .kicker{
+    display:inline-block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--amber);font-weight:700;margin-bottom:14px;
+  }
+  .section-title{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+  .section-sub{max-width:620px;font-size:17px}
+
+  /* ============ Nav ============ */
+  .nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(251,245,234,.96);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(62,42,30,.10);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--brown);text-decoration:none}
+  .logo span{color:var(--amber)}
+  .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+  .nav-links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--brown-2)}
+  .nav-links a:hover{color:var(--amber)}
+  .btn{
+    display:inline-block;background:var(--amber);color:#fff;text-decoration:none;
+    padding:12px 26px;border-radius:999px;font-weight:600;font-size:15px;border:none;cursor:pointer;
+    transition:background .2s ease,transform .15s ease;
+  }
+  .btn:hover{background:var(--amber-dark);transform:translateY(-1px)}
+  .btn-outline{
+    background:transparent;color:var(--brown);border:2px solid var(--brown);
+  }
+  .btn-outline:hover{background:var(--brown);color:#fff}
+  .nav-cta{padding:10px 22px}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{display:block;width:24px;height:2px;background:var(--brown);margin:5px 0;transition:.25s}
+
+  /* ============ Hero ============ */
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -60px, rgba(232,176,75,.35), transparent 60%),
+      radial-gradient(900px 420px at 8% 110%, rgba(198,123,46,.18), transparent 60%),
+      var(--cream);
+    padding:104px 0 96px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(38px,5.4vw,60px);margin-bottom:18px}
+  .hero h1 em{font-style:italic;color:var(--amber)}
+  .hero p.lead{font-size:18px;max-width:520px;margin-bottom:30px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+  .hero-badges div strong{display:block;font-family:var(--serif);font-size:22px;color:var(--brown)}
+  .hero-badges div small{font-size:13px;color:var(--brown-2)}
+  /* decorative "fresh loaf" visual made with pure CSS */
+  .hero-visual{
+    background:linear-gradient(150deg,#E9C88F,#C98F3E 60%,#8F5A22);
+    border-radius:24px;min-height:380px;position:relative;overflow:hidden;box-shadow:var(--shadow);
+  }
+  .hero-visual::before{ /* wheat-ish arcs */
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 70% 30%, rgba(255,255,255,.35), transparent 40%),
+      radial-gradient(circle at 30% 75%, rgba(255,255,255,.22), transparent 45%);
+  }
+  .hero-card{
+    position:absolute;left:28px;bottom:28px;right:28px;background:var(--white);
+    border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);
+  }
+  .hero-card strong{font-family:var(--serif);color:var(--brown);font-size:18px}
+  .hero-card p{font-size:14px;margin-top:4px}
+  .open-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2E9E5B;margin-right:8px}
+
+  /* ============ About ============ */
+  .about{background:var(--white)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-copy p{margin-bottom:16px}
+  .about-list{list-style:none;margin-top:20px;display:grid;gap:12px}
+  .about-list li{display:flex;gap:12px;align-items:flex-start}
+  .about-list .tick{
+    flex:0 0 26px;height:26px;border-radius:50%;background:var(--cream-2);color:var(--amber-dark);
+    font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;
+  }
+  .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  .stat{background:var(--cream);border-radius:var(--radius);padding:18px;text-align:center}
+  .stat strong{display:block;font-family:var(--serif);font-size:26px;color:var(--brown)}
+  .stat small{font-size:13px}
+  .about-panel{
+    background:var(--cream-2);border-radius:24px;padding:44px;position:relative;overflow:hidden;
+  }
+  .about-panel h3{font-size:24px;margin-bottom:12px}
+  .about-panel blockquote{
+    font-family:var(--serif);font-style:italic;font-size:19px;color:var(--brown);margin:18px 0;
+  }
+
+  /* ============ Menu ============ */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .menu-card{
+    background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+    transition:transform .2s ease;
+  }
+  .menu-card:hover{transform:translateY(-5px)}
+  .menu-thumb{
+    height:170px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-size:20px;color:#fff;text-align:center;padding:0 20px;
+  }
+  .menu-body{padding:22px}
+  .menu-body h3{font-size:20px;margin-bottom:6px}
+  .menu-body p{font-size:14.5px;margin-bottom:14px}
+  .price-row{display:flex;justify-content:space-between;align-items:center}
+  .price{font-family:var(--serif);font-size:21px;font-weight:700;color:var(--amber-dark)}
+  .tag{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--amber)}
+
+  /* ============ Testimonials ============ */
+  .testi{background:var(--brown);color:#EDE0CE}
+  .testi .section-title,.testi h3{color:#fff}
+  .testi .section-sub{color:#D8C6AE}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .testi-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    border-radius:var(--radius);padding:28px}
+  .stars{color:var(--gold);letter-spacing:3px;margin-bottom:14px;font-size:15px}
+  .testi-card p{font-size:15.5px;margin-bottom:18px;color:#F1E6D2}
+  .testi-who{display:flex;align-items:center;gap:12px}
+  .avatar{
+    width:44px;height:44px;border-radius:50%;background:var(--amber);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--serif);
+  }
+  .testi-who strong{display:block;color:#fff;font-size:15px}
+  .testi-who small{color:#C9B48F;font-size:13px}
+
+  /* ============ Contact ============ */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:10px}
+  .contact-info h3{font-size:22px;margin-bottom:10px}
+  .contact-info p{margin-bottom:22px}
+  .info-row{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+  .info-row .ico{
+    flex:0 0 40px;height:40px;border-radius:12px;background:var(--cream-2);color:var(--amber-dark);
+    display:flex;align-items:center;justify-content:center;font-weight:700;
+  }
+  form{background:var(--white);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+  .field{margin-bottom:18px}
+  label{display:block;font-weight:600;font-size:14px;color:var(--brown);margin-bottom:7px}
+  input,textarea{
+    width:100%;padding:13px 15px;border:1.5px solid #E3D5BE;border-radius:10px;font-size:15px;
+    font-family:var(--sans);background:#FFFDF8;color:var(--brown-2);
+  }
+  input:focus,textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(198,123,46,.15)}
+  textarea{min-height:120px;resize:vertical}
+  .error{color:#B3362B;font-size:13px;margin-top:6px;display:none}
+  .field.invalid input,.field.invalid textarea{border-color:#B3362B}
+  .field.invalid .error{display:block}
+  .success{
+    display:none;background:#EAF7EE;border:1px solid #BFE3C9;color:#256B3B;border-radius:12px;
+    padding:20px;margin-top:6px;
+  }
+  .success strong{font-family:var(--serif);font-size:18px;display:block;margin-bottom:6px}
+
+  /* ============ Footer ============ */
+  footer{background:#2C1E13;color:#CBB592;padding:48px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;margin-bottom:30px}
+  footer h4{color:#fff;font-family:var(--serif);font-size:18px;margin-bottom:12px}
+  footer p,footer li{font-size:14.5px}
+  footer ul{list-style:none;display:grid;gap:8px}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--gold)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;
+    justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:#A68F6C}
+  .demo-note{font-size:12.5px;color:#A68F6C;margin-top:14px}
+
+  /* ============ Responsive ============ */
+  @media (max-width:900px){
+    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .menu-grid,.testi-grid{grid-template-columns:repeat(2,1fr)}
+    .hero{padding:72px 0}
+    .hero-visual{min-height:280px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:768px){
+    section{padding:64px 0}
+    .burger{display:block}
+    .nav-links{
+      position:absolute;top:68px;left:0;right:0;background:var(--cream);
+      flex-direction:column;align-items:stretch;padding:12px 24px 20px;gap:0;
+      border-bottom:1px solid rgba(62,42,30,.12);display:none;
+    }
+    .nav-links.open{display:flex}
+    .nav-links li{border-top:1px solid rgba(62,42,30,.08)}
+    .nav-links a{display:block;padding:13px 4px}
+    .nav-cta{margin-top:10px;text-align:center}
+  }
+  @media (max-width:560px){
+    .menu-grid,.testi-grid{grid-template-columns:1fr}
+    .about-stats{grid-template-columns:repeat(3,1fr)}
+    .foot-grid{grid-template-columns:1fr}
+    .hero-ctas .btn{width:100%;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">Crumb <span>&amp;</span> Craft</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn nav-cta">Order Fresh</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Artisan Bakery &middot; Chandigarh</span>
+      <h1>Baked fresh every morning, <em>made to be remembered.</em></h1>
+      <p class="lead">From slow-fermented sourdough to celebration cakes, everything at Crumb &amp; Craft leaves our ovens the same day it reaches your table. No preservatives, no shortcuts.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn">See Today's Menu</a>
+        <a href="#contact" class="btn btn-outline">Order a Custom Cake</a>
+      </div>
+      <div class="hero-badges">
+        <div><strong>40+</strong><small>Items baked daily</small></div>
+        <div><strong>4.9</strong><small>Average rating (800+ reviews)</small></div>
+        <div><strong>6 AM</strong><small>First batch out of the oven</small></div>
+      </div>
+    </div>
+    <div class="hero-visual" role="img" aria-label="Freshly baked artisan bread">
+      <div class="hero-card">
+        <span class="open-dot"></span><strong>Open today, 8 AM – 9 PM</strong>
+        <p>Warm sourdough loaves are on the counter right now — they usually sell out by noon.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <span class="kicker">Our Story</span>
+      <h2 class="section-title">A small bakery with an old-fashioned promise</h2>
+      <p>Crumb &amp; Craft started in 2019 as a two-person kitchen in Sector 35, Chandigarh. Our founder, trained in traditional European baking, believed the city deserved bread with real flavour — long fermentation, stone-milled flour, and butter you can actually taste.</p>
+      <p>Seven years later we still bake in small batches through the night, so everything you buy in the morning was shaped by hand just hours earlier.</p>
+      <ul class="about-list">
+        <li><span class="tick">&#10003;</span><span><strong>No preservatives, ever.</strong> If it can't stay fresh naturally, we don't bake it.</span></li>
+        <li><span class="tick">&#10003;</span><span><strong>Local ingredients first.</strong> Flour, dairy and fruit sourced from Punjab farms wherever possible.</span></li>
+        <li><span class="tick">&#10003;</span><span><strong>Custom celebration cakes.</strong> Birthdays, weddings and corporate orders with 48-hour notice.</span></li>
+      </ul>
+      <div class="about-stats">
+        <div class="stat"><strong>7</strong><small>Years baking</small></div>
+        <div class="stat"><strong>25k+</strong><small>Happy customers</small></div>
+        <div class="stat"><strong>100%</strong><small>Veg kitchen</small></div>
+      </div>
+    </div>
+    <div class="about-panel">
+      <span class="kicker">Why it matters</span>
+      <h3>Slow bread in a fast city</h3>
+      <blockquote>"Most bread is made in 90 minutes. Ours takes 24 hours. You can taste every one of them."</blockquote>
+      <p>That patience is why our sourdough has a crackling crust, an open crumb and a gentle tang — and why customers drive across Chandigarh for it on Sunday mornings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section id="menu">
+  <div class="wrap">
+    <span class="kicker">Today's Menu</span>
+    <h2 class="section-title">Baked this morning</h2>
+    <p class="section-sub">A short menu, done well. Prices include everything — no hidden charges, and day-old bread is always half price after 7 PM.</p>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <div class="menu-thumb" style="background:linear-gradient(135deg,#8F5A22,#C98F3E)">Classic Sourdough</div>
+        <div class="menu-body">
+          <span class="tag">Bestseller</span>
+          <h3>Classic Sourdough Loaf</h3>
+          <p>24-hour fermented, stone-milled whole wheat. Crackling crust, soft open crumb. 800 g.</p>
+          <div class="price-row"><span class="price">&#8377;220</span><a class="btn" href="#contact" style="padding:8px 18px;font-size:14px">Order</a></div>
+        </div>
+      </article>
+      <article class="menu-card">
+        <div class="menu-thumb" style="background:linear-gradient(135deg,#B4691E,#E8B04B)">Butter Croissant</div>
+        <div class="menu-body">
+          <span class="tag">Baked 6 AM</span>
+          <h3>Butter Croissant</h3>
+          <p>Laminated over three days with real butter. Shatteringly crisp outside, honeycombed inside.</p>
+          <div class="price-row"><span class="price">&#8377;95</span><a class="btn" href="#contact" style="padding:8px 18px;font-size:14px">Order</a></div>
+        </div>
+      </article>
+      <article class="menu-card">
+        <div class="menu-thumb" style="background:linear-gradient(135deg,#5C4232,#8F5A22)">Chocolate Cake</div>
+        <div class="menu-body">
+          <span class="tag">Celebration</span>
+          <h3>Belgian Chocolate Truffle Cake</h3>
+          <p>Three layers of dark chocolate sponge with ganache. Serves 8–10. 48-hour notice for custom messages.</p>
+          <div class="price-row"><span class="price">&#8377;850</span><a class="btn" href="#contact" style="padding:8px 18px;font-size:14px">Order</a></div>
+        </div>
+      </article>
+      <article class="menu-card">
+        <div class="menu-thumb" style="background:linear-gradient(135deg,#C98F3E,#E8B04B)">Cinnamon Roll</div>
+        <div class="menu-body">
+          <span class="tag">Kids love it</span>
+          <h3>Cinnamon Morning Bun</h3>
+          <p>Soft brioche swirled with cinnamon and brown sugar, finished with a light vanilla glaze.</p>
+          <div class="price-row"><span class="price">&#8377;120</span><a class="btn" href="#contact" style="padding:8px 18px;font-size:14px">Order</a></div>
+        </div>
+      </article>
+      <article class="menu-card">
+        <div class="menu-thumb" style="background:linear-gradient(135deg,#7A4E2D,#B4691E)">Multigrain Loaf</div>
+        <div class="menu-body">
+          <span class="tag">High fibre</span>
+          <h3>Seeded Multigrain Loaf</h3>
+          <p>Whole wheat, oats, flax and sunflower seeds. Dense, nutty and filling — great for toast. 700 g.</p>
+          <div class="price-row"><span class="price">&#8377;180</span><a class="btn" href="#contact" style="padding:8px 18px;font-size:14px">Order</a></div>
+        </div>
+      </article>
+      <article class="menu-card">
+        <div class="menu-thumb" style="background:linear-gradient(135deg,#A05F1C,#D89A4A)">Blueberry Muffin</div>
+        <div class="menu-body">
+          <span class="tag">Seasonal</span>
+          <h3>Blueberry Crumble Muffin</h3>
+          <p>Buttermilk muffin loaded with blueberries and a buttery crumble top. Baked in small trays of twelve.</p>
+          <div class="price-row"><span class="price">&#8377;110</span><a class="btn" href="#contact" style="padding:8px 18px;font-size:14px">Order</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <span class="kicker">Customer Reviews</span>
+    <h2 class="section-title">What Chandigarh says</h2>
+    <p class="section-sub">Real reviews from our regulars — collected in store and on Google.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"The sourdough here ruined supermarket bread for me forever. I plan my Sunday mornings around their 8 AM batch."</p>
+        <div class="testi-who">
+          <div class="avatar">PS</div>
+          <div><strong>Priya Sharma</strong><small>Regular since 2021 &middot; Sector 35</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Ordered my daughter's birthday cake with two days' notice. It looked beautiful and the chocolate truffle was the best we've had in the city."</p>
+        <div class="testi-who">
+          <div class="avatar">AG</div>
+          <div><strong>Amit Gupta</strong><small>Custom cake order &middot; Sector 17</small></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p>"Croissants sell out fast, so go early. When you get one warm, the layers just shatter. Worth every rupee."</p>
+        <div class="testi-who">
+          <div class="avatar">NK</div>
+          <div><strong>Neha Kapoor</strong><small>Weekend visitor &middot; Mohali</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <span class="kicker">Get In Touch</span>
+    <h2 class="section-title">Order, enquire, or just say hello</h2>
+    <p class="section-sub">Send us a message and we will reply within a few hours during shop timings (8 AM – 9 PM).</p>
+    <div class="contact-grid" style="margin-top:36px">
+      <div class="contact-info">
+        <h3>Visit the bakery</h3>
+        <p>Walk in for the full smell of fresh bread — or message us for bulk and celebration orders.</p>
+        <div class="info-row">
+          <div class="ico">A</div>
+          <div><strong>Address</strong><br>SCO 12, Sector 35-E,<br>Chandigarh 160036</div>
+        </div>
+        <div class="info-row">
+          <div class="ico">T</div>
+          <div><strong>Timings</strong><br>Mon – Sun, 8:00 AM – 9:00 PM</div>
+        </div>
+        <div class="info-row">
+          <div class="ico">P</div>
+          <div><strong>Phone</strong><br>+91 98765 43210</div>
+        </div>
+      </div>
+      <form id="contactForm" novalidate>
+        <div class="field" id="f-name">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Rahul Verma" autocomplete="name">
+          <div class="error">Please enter your name.</div>
+        </div>
+        <div class="field" id="f-phone">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 98765 43210" autocomplete="tel">
+          <div class="error">Please enter a valid 10-digit phone number.</div>
+        </div>
+        <div class="field" id="f-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What would you like to order or ask about?"></textarea>
+          <div class="error">Please write your message (at least 10 characters).</div>
+        </div>
+        <button type="submit" class="btn" style="width:100%">Send Message</button>
+        <div class="success" id="successBox" role="status">
+          <strong>Thank you! Your message has been received.</strong>
+          We will call you back within a few hours during shop timings (8 AM – 9 PM). For urgent orders, please call us directly.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Crumb &amp; Craft</h4>
+        <p>Artisan bakery in Chandigarh. Small batches, real ingredients, baked fresh every morning since 2019.</p>
+        <p class="demo-note">Demo website — a portfolio sample. Business details are fictional.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>SCO 12, Sector 35-E, Chandigarh 160036</li>
+          <li>Open daily, 8 AM – 9 PM</li>
+          <li>+91 98765 43210</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Crumb &amp; Craft. All rights reserved.</span>
+      <span>Sample site for portfolio demonstration.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- Mobile nav toggle ----
+(function(){
+  var burger = document.getElementById('burger');
+  var links  = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // Close menu when a link is tapped
+  links.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') links.classList.remove('open');
+  });
+})();
+
+// ---- Contact form: front-end validation + success message (no backend) ----
+(function(){
+  var form = document.getElementById('contactForm');
+  var successBox = document.getElementById('successBox');
+
+  function setInvalid(fieldId, invalid){
+    document.getElementById(fieldId).classList.toggle('invalid', invalid);
+    return !invalid;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name    = document.getElementById('name').value.trim();
+    var phone   = document.getElementById('phone').value.replace(/\D/g, '');
+    var message = document.getElementById('message').value.trim();
+
+    var okName    = setInvalid('f-name', name.length < 2);
+    // Accept 10-digit Indian mobile numbers, with or without leading 91/0
+    if (phone.length === 12 && phone.indexOf('91') === 0) phone = phone.slice(2);
+    if (phone.length === 11 && phone.charAt(0) === '0')   phone = phone.slice(1);
+    var okPhone   = setInvalid('f-phone', !/^[6-9]\d{9}$/.test(phone));
+    var okMessage = setInvalid('f-message', message.length < 10);
+
+    if (okName && okPhone && okMessage){
+      form.querySelectorAll('.field, button[type="submit"]').forEach(function(el){
+        el.style.display = 'none';
+      });
+      successBox.style.display = 'block';
+      successBox.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+
+  // Clear the error state as the user fixes a field
+  ['name','phone','message'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      this.closest('.field').classList.remove('invalid');
+    });
+  });
+})();
+</script>
+</body>
+</html>
