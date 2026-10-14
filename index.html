@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Rohit Rajput — Digital Specialist. Live demos of my work: websites, logo & social media design, data entry, web research and virtual assistance. Packages from $50, delivery in 12–15 hours on most projects." />
+<link rel="icon" href="data:," />
+<title>Rohit Rajput — Portfolio & Live Demos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FAF9F6;
+    --surface:#FFFFFF;
+    --surface-2:#F1EEE8;
+    --ink:#1B1815;
+    --ink-2:#4A443C;
+    --ink-3:#7A7264;
+    --line:#E3DDD2;
+    --accent:#B45309;        /* deep amber */
+    --accent-strong:#92400E;
+    --accent-soft:#FBEBD3;
+    --dark-band:#1B1815;
+    --dark-band-ink:#F5F1E8;
+    --dark-band-ink2:#CFC6B4;
+    --good:#2E7D46;
+    --good-soft:#E3F2E7;
+    --radius:14px;
+    --shadow:0 8px 28px rgba(27,24,21,.08);
+    --font-d:"Sora",system-ui,sans-serif;
+    --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --font-m:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#131110;
+      --surface:#1D1A17;
+      --surface-2:#26221E;
+      --ink:#F2EDE3;
+      --ink-2:#C9C0AF;
+      --ink-3:#9A9081;
+      --line:#37312A;
+      --accent:#E8A33D;
+      --accent-strong:#F2BC66;
+      --accent-soft:#3A2C14;
+      --dark-band:#0C0A09;
+      --dark-band-ink:#F5F1E8;
+      --dark-band-ink2:#B9AF9C;
+      --good:#7BC98F;
+      --good-soft:#1E3325;
+      --shadow:0 8px 28px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-b);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--font-d);line-height:1.18;margin:0;color:var(--ink)}
+  p{margin:0}
+  a{color:var(--accent-strong)}
+  img,video{max-width:100%;display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  section{padding:76px 0}
+  .sec-head{max-width:720px;margin-bottom:38px}
+  .sec-head h2{font-size:clamp(27px,3.6vw,38px);font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+  .sec-head p{color:var(--ink-2);font-size:16.5px}
+  .sec-tag{display:inline-block;font-family:var(--font-m);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-strong);background:var(--accent-soft);padding:5px 11px;border-radius:999px;margin-bottom:16px}
+
+  /* ---------- top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+  .brand{font-family:var(--font-d);font-weight:800;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:10px}
+  .brand em{font-style:normal;color:var(--accent)}
+  .brand-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top center;border:2px solid var(--accent);flex:0 0 auto;background:var(--surface-2)}
+  .topnav{display:flex;gap:22px;align-items:center}
+  .topnav a{color:var(--ink-2);text-decoration:none;font-size:14.5px;font-weight:500}
+  .topnav a:hover{color:var(--accent-strong)}
+  .topnav a.cta{background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-weight:600}
+  .topnav a.cta:hover{background:var(--accent-strong);color:#fff}
+  @media (max-width:760px){ .topnav a:not(.cta){display:none} }
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 58px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .avail{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--good);background:var(--good-soft);padding:6px 13px;border-radius:999px;margin-bottom:20px}
+  .avail i{width:8px;height:8px;border-radius:50%;background:var(--good);display:inline-block}
+  .hero h1{font-size:clamp(38px,5.6vw,58px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+  .hero .role{font-family:var(--font-d);font-size:clamp(17px,2.4vw,21px);font-weight:600;color:var(--accent-strong);margin-bottom:16px}
+  .hero .lead{font-size:17px;color:var(--ink-2);max-width:540px;margin-bottom:26px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:13px 26px;border-radius:10px;border:1.5px solid var(--ink);transition:transform .15s ease,background .15s ease;cursor:pointer;font-family:var(--font-b)}
+  .btn-solid{background:var(--ink);color:var(--bg)}
+  .btn-solid:hover{background:var(--accent-strong);border-color:var(--accent-strong);color:#fff;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent-strong);color:var(--accent-strong)}
+  .hero-stats{display:flex;gap:30px;flex-wrap:wrap}
+  .hero-stats div strong{display:block;font-family:var(--font-d);font-size:22px;font-weight:700}
+  .hero-stats div span{font-size:13px;color:var(--ink-3)}
+  .hero-stack{display:grid;gap:20px;align-content:start}
+  .hero-media-2{margin-left:36px}
+  @media (max-width:560px){ .hero-media-2{margin-left:14px} }
+  .hero-media{background:var(--dark-band);border-radius:18px;padding:14px;box-shadow:var(--shadow)}
+  .hero-media video{border-radius:10px;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+  .hero-media figcaption{color:var(--dark-band-ink2);font-size:13px;padding:10px 4px 2px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .hero-media figcaption b{color:var(--dark-band-ink);font-weight:600}
+  .mid-reel{border-top:1px solid var(--line)}
+  .mid-reel-box{max-width:860px;margin:0 auto}
+
+  /* ---------- service strip ---------- */
+  .services{padding:54px 0 10px}
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--ink);display:block;transition:border-color .15s ease,transform .15s ease}
+  .svc:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .svc .num{font-family:var(--font-m);font-size:12px;color:var(--accent-strong);letter-spacing:.1em}
+  .svc h3{font-size:17px;font-weight:700;margin:8px 0 6px}
+  .svc p{font-size:14px;color:var(--ink-2)}
+  .svc .from{display:block;margin-top:12px;font-family:var(--font-d);font-weight:700;font-size:15px}
+  .svc .from small{font-family:var(--font-b);font-weight:500;color:var(--ink-3);font-size:12.5px}
+  @media (max-width:980px){ .svc-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:520px){ .svc-grid{grid-template-columns:1fr} }
+
+  /* ---------- demo blocks ---------- */
+  .demo{border-top:1px solid var(--line)}
+  .demo-head{display:flex;align-items:flex-start;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+  .demo-head .n{font-family:var(--font-m);font-size:13px;color:var(--bg);background:var(--accent);border-radius:8px;padding:6px 10px;font-weight:500;flex:0 0 auto;margin-top:4px}
+  .demo-head h3{font-size:clamp(22px,3vw,28px);font-weight:700;margin-bottom:6px}
+  .demo-head p{color:var(--ink-2);max-width:640px;font-size:15.5px}
+  .sample-note{font-size:13px;color:var(--ink-3);margin-top:14px}
+
+  /* browser frame */
+  .browser{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+  .browser-bar{display:flex;align-items:center;gap:8px;background:var(--surface-2);padding:10px 14px;border-bottom:1px solid var(--line)}
+  .browser-bar i{width:11px;height:11px;border-radius:50%;background:var(--line);display:inline-block}
+  .browser-bar i:first-child{background:#D96C4F}.browser-bar i:nth-child(2){background:#E3B341}.browser-bar i:nth-child(3){background:#7BA05B}
+  .browser-url{font-family:var(--font-m);font-size:12.5px;color:var(--ink-3);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:4px 12px;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .demo-shot{background:#FBF5EA;color:#3E2A1E;padding:38px 34px;font-family:Georgia,serif}
+  .demo-shot .brandline{font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:#A05F1C;font-family:var(--font-b);font-weight:700;margin-bottom:12px}
+  .demo-shot h4{font-family:Georgia,serif;font-size:clamp(24px,4vw,36px);color:#3E2A1E;font-weight:700;max-width:560px;margin-bottom:12px}
+  .demo-shot h4 em{color:#C67B2E}
+  .demo-shot p{font-family:var(--font-b);font-size:15px;color:#5C4232;max-width:520px;margin-bottom:20px}
+  .demo-shot .fake-btn{display:inline-block;background:#C67B2E;color:#fff;font-family:var(--font-b);font-weight:600;font-size:14px;padding:10px 22px;border-radius:999px;margin-right:10px}
+  .demo-shot .fake-btn.o{background:transparent;color:#3E2A1E;border:2px solid #3E2A1E}
+  .demo-shot .mini-stats{display:flex;gap:26px;margin-top:24px;font-family:var(--font-b);flex-wrap:wrap}
+  .demo-shot .mini-stats b{display:block;font-family:Georgia,serif;font-size:20px;color:#3E2A1E}
+  .demo-shot .mini-stats span{font-size:12.5px;color:#5C4232}
+  .demo-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;align-items:center}
+  .feat-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+  .feat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14.5px}
+  .feat b{display:block;font-family:var(--font-d);font-size:15px;margin-bottom:4px}
+  .feat span{color:var(--ink-2)}
+  @media (max-width:820px){ .feat-list{grid-template-columns:1fr} }
+
+  /* design gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gal figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .gal img{width:100%;height:210px;object-fit:cover;background:var(--surface-2)}
+  .gal figcaption{padding:16px 18px}
+  .gal figcaption b{font-family:var(--font-d);display:block;font-size:15.5px;margin-bottom:5px}
+  .gal figcaption p{font-size:14px;color:var(--ink-2)}
+  .gal .tagline{display:inline-block;margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-strong)}
+  @media (max-width:900px){ .gal{grid-template-columns:1fr 1fr} .gal figure:last-child{grid-column:span 2} .gal figure:last-child img{height:230px} }
+  @media (max-width:560px){ .gal{grid-template-columns:1fr} .gal figure:last-child{grid-column:auto} .gal img{height:auto} }
+
+  /* tables */
+  .tbl-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .tbl-scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+  caption{text-align:left;font-family:var(--font-d);font-weight:700;font-size:15.5px;padding:16px 18px 4px;color:var(--ink)}
+  .tbl-sub{padding:0 18px 12px;color:var(--ink-3);font-size:13px}
+  th{font-family:var(--font-d);font-size:12px;letter-spacing:.07em;text-transform:uppercase;text-align:left;color:var(--ink-3);padding:10px 14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface-2);white-space:nowrap}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.strong{color:var(--ink);font-weight:600}
+  td.num{font-family:var(--font-m);font-size:13px;white-space:nowrap}
+  .pill{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-strong);white-space:nowrap}
+  .pill.green{background:var(--good-soft);color:var(--good)}
+  .more-rows{display:none}
+  .more-rows.open{display:table-row-group}
+  .toggle-btn{margin:16px 18px 18px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink);font-family:var(--font-b);font-weight:600;font-size:14px;padding:10px 18px;border-radius:9px;cursor:pointer}
+  .toggle-btn:hover{border-color:var(--accent);color:var(--accent-strong)}
+  @media (max-width:640px){
+    table{min-width:0}
+    thead{display:none}
+    tbody,tr,td{display:block;width:100%}
+    tr{border-bottom:1px solid var(--line);padding:10px 4px}
+    tr:last-child{border-bottom:none}
+    td{border-bottom:none;padding:3px 14px}
+    td::before{content:attr(data-l);display:inline-block;min-width:92px;font-family:var(--font-d);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-right:8px}
+    td.num{white-space:normal}
+  }
+
+  /* research */
+  .rec{background:var(--dark-band);color:var(--dark-band-ink);border-radius:16px;padding:26px 28px;margin-top:18px}
+  .rec h4{color:var(--dark-band-ink);font-size:18px;margin-bottom:8px}
+  .rec p{color:var(--dark-band-ink2);font-size:15px;max-width:760px}
+  .rec p b{color:var(--dark-band-ink)}
+  .findings{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+  .findings div{border:1px solid rgba(245,241,232,.18);border-radius:10px;padding:13px 16px;font-size:14.5px;color:var(--dark-band-ink2)}
+  .findings div b{color:var(--dark-band-ink);display:block;font-family:var(--font-d);font-size:14.5px;margin-bottom:2px}
+  @media (max-width:700px){ .findings{grid-template-columns:1fr} }
+
+  /* pricing */
+  .pricing-sec{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pkg{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+  .pkg.pop{border:2px solid var(--accent);position:relative}
+  .pkg .pop-tag{position:absolute;top:-13px;left:20px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;padding:4px 12px;border-radius:999px;text-transform:uppercase}
+  .pkg h3{font-size:16px;font-weight:700}
+  .pkg .svc-name{font-size:13px;color:var(--ink-3);margin-bottom:2px;font-family:var(--font-m);letter-spacing:.05em;text-transform:uppercase}
+  .pkg .price{font-family:var(--font-d);font-size:31px;font-weight:800;margin:10px 0 2px}
+  .pkg .price small{font-size:14px;font-weight:600;color:var(--ink-3)}
+  .pkg .deliv{font-size:13.5px;color:var(--accent-strong);font-weight:600;margin-bottom:14px}
+  .pkg ul{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+  .pkg ul li{padding-left:22px;position:relative}
+  .pkg ul li::before{content:"✓";position:absolute;left:0;color:var(--accent-strong);font-weight:700}
+  .pkg .btn{margin-top:auto;text-align:center}
+  @media (max-width:980px){ .price-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:620px){ .price-grid{grid-template-columns:1fr} }
+  .price-note{margin-top:22px;font-size:14px;color:var(--ink-2);text-align:center}
+  .hourly{margin-top:16px;text-align:center;font-family:var(--font-d);font-weight:600;font-size:16px}
+  .hourly span{color:var(--accent-strong)}
+
+  /* process + about */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .step .sn{font-family:var(--font-m);font-size:12px;color:var(--accent-strong);letter-spacing:.1em}
+  .step h3{font-size:16px;margin:8px 0 6px}
+  .step p{font-size:14.5px;color:var(--ink-2)}
+  @media (max-width:980px){ .steps{grid-template-columns:1fr 1fr} }
+  @media (max-width:520px){ .steps{grid-template-columns:1fr} }
+  .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+  .skills span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:500;color:var(--ink-2)}
+
+  /* hire */
+  .hire{background:var(--dark-band);color:var(--dark-band-ink);border-radius:20px;padding:44px 40px;text-align:center}
+  .hire h2{color:var(--dark-band-ink);font-size:clamp(26px,3.6vw,36px);margin-bottom:10px}
+  .hire p{color:var(--dark-band-ink2);max-width:560px;margin:0 auto 26px;font-size:16px}
+  .hire-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .hire-links a{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:12px 24px;border-radius:10px;border:1.5px solid rgba(245,241,232,.35);color:var(--dark-band-ink);transition:background .15s ease}
+  .hire-links a:hover{background:rgba(245,241,232,.12)}
+  .hire-links a.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hire-links a.primary:hover{background:var(--accent-strong)}
+  .hire .mail{margin-top:22px;font-size:15px;color:var(--dark-band-ink2)}
+  .hire .mail a{color:var(--dark-band-ink);font-weight:600}
+  footer{padding:30px 0 40px;text-align:center;color:var(--ink-3);font-size:13.5px}
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr} section{padding:58px 0} .hire{padding:34px 22px} }
+
+  /* ---------- chatbot demo ---------- */
+  .chat-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);max-width:780px}
+  .chat-head{display:flex;align-items:center;gap:12px;background:var(--surface-2);padding:14px 18px;border-bottom:1px solid var(--line)}
+  .chat-head .avatar{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:700;font-size:15px;flex:0 0 auto}
+  .chat-head b{font-family:var(--font-d);font-size:15.5px;display:block;line-height:1.3}
+  .chat-head span{font-size:13px;color:var(--good);font-weight:600}
+  .chat-log{padding:18px;display:grid;gap:10px;max-height:360px;overflow-y:auto}
+  .msg{max-width:84%;padding:11px 15px;border-radius:14px;font-size:14.5px;line-height:1.55}
+  .msg.bot{background:var(--surface-2);border-bottom-left-radius:4px;justify-self:start}
+  .msg.user{background:var(--accent);color:#fff;border-bottom-right-radius:4px;justify-self:end}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;padding:2px 18px 14px}
+  .chip{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);font-family:var(--font-b);font-size:13px;font-weight:600;padding:7px 13px;border-radius:999px;cursor:pointer}
+  .chip:hover{border-color:var(--accent);color:var(--accent-strong)}
+  .chat-form{display:flex;gap:10px;padding:14px 18px;border-top:1px solid var(--line)}
+  .chat-form input{flex:1;min-width:0;border:1px solid var(--line);border-radius:9px;padding:11px 14px;font-family:var(--font-b);font-size:14.5px;background:var(--surface);color:var(--ink)}
+  .chat-form input:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .chat-form button{background:var(--ink);color:var(--bg);border:none;font-family:var(--font-b);font-weight:600;font-size:14.5px;padding:11px 20px;border-radius:9px;cursor:pointer;flex:0 0 auto}
+  .chat-form button:hover{background:var(--accent-strong);color:#fff}
+
+  /* ---------- writing / VA / web3 sample cards ---------- */
+  .write-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .write-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .write-card .wtag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-strong);background:var(--accent-soft);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+  .write-card h4{font-size:16.5px;margin-bottom:8px}
+  .write-card p{font-size:14.5px;color:var(--ink-2);margin-bottom:10px}
+  .write-card p:last-child{margin-bottom:0}
+  .write-card p b{color:var(--ink)}
+  .write-card ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14.5px;color:var(--ink-2)}
+  .write-card ul li{padding-left:20px;position:relative}
+  .write-card ul li::before{content:"—";position:absolute;left:0;color:var(--accent-strong);font-weight:700}
+  .mail-meta{font-family:var(--font-m);font-size:13px;background:var(--surface-2);border-radius:9px;padding:11px 14px;line-height:1.7}
+  .post-card{font-size:15px;color:var(--ink-2);white-space:pre-line}
+  @media (max-width:760px){ .write-grid{grid-template-columns:1fr} }
+
+  /* ---------- reviews ---------- */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .rev{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .rev .stars{color:var(--accent);letter-spacing:3px;font-size:15px;margin-bottom:10px}
+  .rev p{font-size:15px;color:var(--ink-2);margin-bottom:14px}
+  .rev b{font-family:var(--font-d);font-size:14.5px;display:block;color:var(--ink)}
+  .rev span{font-size:13px;color:var(--ink-3)}
+  @media (max-width:900px){ .rev-grid{grid-template-columns:1fr} }
+
+  /* ---------- service videos ---------- */
+  section[id]{scroll-margin-top:76px}
+  .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .vid-card{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .vid-frame{position:relative;background:#000}
+  .vid-card video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000;display:block}
+  .vid-dur{position:absolute;top:10px;right:10px;background:rgba(16,13,10,.82);color:#F5F1E8;font-family:var(--font-m);font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px;pointer-events:none}
+  .vid-card figcaption{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+  .vid-card figcaption b{font-family:var(--font-d);display:block;font-size:16.5px;margin-bottom:5px}
+  .vid-card figcaption p{font-size:14px;color:var(--ink-2)}
+  .vid-steps{list-style:none;margin:12px 0 0;padding:12px 0 0;border-top:1px solid var(--line);display:grid;gap:6px;font-size:13.5px;color:var(--ink-2)}
+  .vid-steps li{padding-left:20px;position:relative}
+  .vid-steps li::before{content:"▸";position:absolute;left:2px;color:var(--accent-strong);font-weight:700}
+  .vid-music{margin-top:12px;font-family:var(--font-m);font-size:12px;letter-spacing:.04em;color:var(--ink-3)}
+  .vid-music b{color:var(--accent-strong);font-weight:500}
+  .vid-link{margin-top:14px;font-size:14px;font-weight:600;text-decoration:none}
+  .vid-link:hover{text-decoration:underline}
+  @media (max-width:820px){ .vid-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top"><img class="brand-avatar" src="assets/rohit-photo.jpg" alt="Portrait of Rohit Rajput" decoding="async" />Rohit Rajput <em>· Portfolio</em></a>
+    <nav class="topnav">
+      <a href="#demos">Live Demos</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#process">How It Works</a>
+      <a class="cta" href="#hire">Hire Me</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="avail"><i></i> Available for new projects — worldwide, remote</span>
+      <h1>Rohit Rajput</h1>
+      <p class="role">Digital Specialist · AI Operations · Customer Support</p>
+      <p class="lead">I build clean websites, design scroll-stopping social content, and keep business data and inboxes organised. Five years of freelance work for small businesses — every demo below is a real sample of what I deliver.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#demos">See Live Demos</a>
+        <a class="btn btn-ghost" href="#pricing">View Pricing</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>5+ years</strong><span>Freelance experience</span></div>
+        <div><strong>15+</strong><span>Websites delivered</span></div>
+        <div><strong>$15/hr</strong><span>Standard rate</span></div>
+        <div><strong>EN · HI</strong><span>English &amp; Hindi</span></div>
+      </div>
+    </div>
+    <div class="hero-stack">
+      <figure class="hero-media" style="margin:0">
+        <video controls preload="metadata" poster="assets/poster-showreel.jpg" playsinline src="assets/showreel.mp4" aria-label="Brand identity showreel video, by Rohit Rajput"></video>
+        <figcaption><span><b>Brand identity showreel</b></span><span>0:16 · Brand · Design · Social</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<div class="wrap services" id="services">
+  <div class="svc-grid">
+    <a class="svc" href="#demo-web">
+      <span class="num">01</span>
+      <h3>Websites &amp; Landing Pages</h3>
+      <p>Fast, mobile-friendly sites for small businesses — design, copy polish and launch.</p>
+      <span class="from"><small>from</small> $150</span>
+    </a>
+    <a class="svc" href="#demo-ai">
+      <span class="num">02</span>
+      <h3>AI Tools &amp; Automation</h3>
+      <p>Support chatbots and AI workflows that answer customers and cut repetitive work.</p>
+      <span class="from"><small>from</small> $120</span>
+    </a>
+    <a class="svc" href="#demo-design">
+      <span class="num">03</span>
+      <h3>Logo &amp; Social Media Design</h3>
+      <p>Logos, promo posts and thumbnails that look professional and read clearly at any size.</p>
+      <span class="from"><small>from</small> $50</span>
+    </a>
+    <a class="svc" href="#demo-writing">
+      <span class="num">04</span>
+      <h3>Content Writing</h3>
+      <p>Website copy, product descriptions, blog posts and social media captions that sell.</p>
+      <span class="from"><small>from</small> $60</span>
+    </a>
+    <a class="svc" href="#demo-data">
+      <span class="num">05</span>
+      <h3>Data Entry &amp; Cleaning</h3>
+      <p>Product listings, spreadsheets and CRM data — entered, cleaned, deduplicated, validated.</p>
+      <span class="from"><small>from</small> $50</span>
+    </a>
+    <a class="svc" href="#demo-research">
+      <span class="num">06</span>
+      <h3>Web Research</h3>
+      <p>Comparison reports with sources and a clear recommendation — not just raw data.</p>
+      <span class="from"><small>from</small> $60</span>
+    </a>
+    <a class="svc" href="#demo-va">
+      <span class="num">07</span>
+      <h3>Virtual Assistant</h3>
+      <p>Email drafting, inbox organisation, scheduling and day-to-day admin, handled daily.</p>
+      <span class="from"><small>from</small> $150/mo</span>
+    </a>
+    <a class="svc" href="#demo-web3">
+      <span class="num">08</span>
+      <h3>Web3 &amp; Crypto Research</h3>
+      <p>Project analysis, token research and community content for Web3 teams.</p>
+      <span class="from"><small>rate</small> $15/hr</span>
+    </a>
+  </div>
+</div>
+
+<section style="padding-top:44px" id="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">Working Demo Videos</span>
+      <h2>Watch the work happen, step by step</h2>
+      <p>These are not image slideshows. Each video walks through a real job from brief to final result — the steps, the tools on screen, and the finished output — so you can see exactly how your project would be done. Every video is watermarked with my name. The samples use fictional businesses, the same ones in the full demos below. Each video now carries a clear English voice-over that explains what the project is, how the work is done, and what the final result looks like — the original background score is still there, mixed low underneath so the narration stays in front. Every step is also captioned on screen, so the demos read clearly even on mute.</p>
+    </div>
+    <div class="vid-grid">
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-web.jpg" playsinline src="assets/video-web.mp4" aria-label="Website development walkthrough video — building a bakery website step by step, by Rohit Rajput"></video>
+          <span class="vid-dur">0:36 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>1 · Website Development — building a site live</b>
+          <p>A bakery website built from a blank page to the finished, working result.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — the brief, the build, and the finished website</p>
+          <ul class="vid-steps">
+            <li>Reading the client brief</li>
+            <li>Structuring the page in HTML</li>
+            <li>Styling &amp; making it mobile-responsive</li>
+            <li>Testing, then the final walkthrough</li>
+          </ul>
+          <a class="vid-link" href="#demo-web">Open the live website demo →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-ai.jpg" playsinline src="assets/video-ai.mp4" aria-label="AI tools walkthrough video — building a customer support chatbot step by step, by Rohit Rajput"></video>
+          <span class="vid-dur">0:32 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>2 · AI Tools — generating a real result</b>
+          <p>A support chatbot built from a business's own FAQs, answering a customer live.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — how the chatbot is taught, and how it answers live</p>
+          <ul class="vid-steps">
+            <li>Collecting prices, FAQs &amp; policies</li>
+            <li>Teaching the assistant the answers</li>
+            <li>A customer asks — the bot replies instantly</li>
+            <li>Automation &amp; human review around it</li>
+          </ul>
+          <a class="vid-link" href="#demo-ai">Try the live chatbot →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-design.jpg" playsinline src="assets/video-design.mp4" aria-label="AI design walkthrough video — logo and social post design steps and final output, by Rohit Rajput"></video>
+          <span class="vid-dur">0:33 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>3 · AI Design — brief to final output</b>
+          <p>A logo and a sale post designed step by step, from first concepts to delivery files.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — from brand brief to the final design pack</p>
+          <ul class="vid-steps">
+            <li>Reading the brand brief</li>
+            <li>Generating &amp; shortlisting concepts</li>
+            <li>Polishing the winning logo</li>
+            <li>Building the social post &amp; final pack</li>
+          </ul>
+          <a class="vid-link" href="#demo-design">See the design gallery →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-data.jpg" playsinline src="assets/video-data.mp4" aria-label="Data entry and web research walkthrough video — organising sample data and building a research report, by Rohit Rajput"></video>
+          <span class="vid-dur">0:35 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>4 · Data Entry &amp; Web Research</b>
+          <p>Messy supplier data cleaned into an upload-ready sheet, then turned into a report.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — messy data in, clean sheet and report out</p>
+          <ul class="vid-steps">
+            <li>Receiving the raw, messy data</li>
+            <li>Cleaning, deduplicating &amp; validating rows</li>
+            <li>Researching the gaps online</li>
+            <li>The final report, with a recommendation</li>
+          </ul>
+          <a class="vid-link" href="#demo-data">See the sample sheet &amp; report →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-writing.jpg" playsinline src="assets/video-writing.mp4" aria-label="Content creation walkthrough video — from client brief to finished content, by Rohit Rajput"></video>
+          <span class="vid-dur">0:29 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>5 · Content Creation — brief to final content</b>
+          <p>A one-line brief becomes a finished product description and a ready-to-post caption.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — how a one-line brief becomes publish-ready content</p>
+          <ul class="vid-steps">
+            <li>The client brief &amp; audience</li>
+            <li>Drafting, then the human rewrite</li>
+            <li>Adapting it for social media</li>
+            <li>Final quality check &amp; delivery</li>
+          </ul>
+          <a class="vid-link" href="#demo-writing">Read the finished samples →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-web3.jpg" playsinline src="assets/video-web3.mp4" aria-label="Web3 research walkthrough video — live exchange screen with candlestick chart, on-chain checks and final brief, by Rohit Rajput"></video>
+          <span class="vid-dur">0:40 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>6 · Web3 Research — live exchange to final brief</b>
+          <p>It opens on a live exchange screen — candlestick chart, token list and order book — then the project gets checked on-chain and the brief gets written.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — reading the chart, checking on-chain, writing the brief</p>
+          <ul class="vid-steps">
+            <li>Live market — candles, tokens &amp; order book</li>
+            <li>Reading the chart — trend, support, resistance</li>
+            <li>On-chain checks — supply, vesting, holders</li>
+            <li>Red-flag scan &amp; the final brief</li>
+          </ul>
+          <a class="vid-link" href="#demo-web3">See the research format →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-auto.jpg" playsinline src="assets/video-auto.mp4" aria-label="Automation walkthrough video — building a workflow that turns orders into invoices automatically, by Rohit Rajput"></video>
+          <span class="vid-dur">0:30 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>7 · Automation — a workflow that runs itself</b>
+          <p>A bakery's daily order-to-invoice chain, automated end to end and shown running on a real order.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — the manual chain, the workflow, the hours saved</p>
+          <ul class="vid-steps">
+            <li>Mapping the manual, copy-paste chain</li>
+            <li>Connecting trigger → sheet → invoice → email</li>
+            <li>Running a real order through it, live</li>
+            <li>Result: 38 orders, 0 errors, ~2.5 hrs saved a day</li>
+          </ul>
+          <a class="vid-link" href="#demo-ai">See the AI &amp; automation demo →</a>
+        </figcaption>
+      </figure>
+      <figure class="vid-card">
+        <div class="vid-frame">
+          <video controls preload="metadata" poster="assets/poster-va.jpg" playsinline src="assets/video-va.mp4" aria-label="Virtual assistant walkthrough video — inbox triage, email drafting and weekly planning, by Rohit Rajput"></video>
+          <span class="vid-dur">0:27 · Walkthrough</span>
+        </div>
+        <figcaption>
+          <b>Bonus · Virtual Assistant — a week of admin</b>
+          <p>Inbox triage, a drafted follow-up email and a planned week, shown step by step.</p>
+          <p class="vid-music"><b>Voice-over:</b> English narration — inbox triage, the drafted email, the planned week</p>
+          <ul class="vid-steps">
+            <li>Triaging the morning inbox</li>
+            <li>Drafting the follow-up email</li>
+            <li>Planning the week's admin</li>
+          </ul>
+          <a class="vid-link" href="#demo-va">See the VA samples →</a>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="sample-note">Each walkthrough uses the same fictional sample projects as the full demos further down this page — open any demo to inspect the actual finished work behind the video. The voice-overs are recorded narration made for these demos, and the soft scores underneath are original instrumentals — no copyrighted songs — so the portfolio is safe to share with clients anywhere.</p>
+  </div>
+</section>
+
+<main id="demos">
+
+<!-- ============ DEMO 1 : WEBSITE ============ -->
+<section class="demo" id="demo-web">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 01</span>
+      <div>
+        <h3>Website — “Crumb &amp; Craft” bakery landing page</h3>
+        <p>A complete one-page site I built for a fictional artisan bakery: sticky nav, menu with prices, customer reviews, and a working contact form with validation. It is fully live — open it and try the form.</p>
+      </div>
+    </div>
+    <div class="browser">
+      <div class="browser-bar"><i></i><i></i><i></i><span class="browser-url">crumbandcraft.demo</span></div>
+      <div class="demo-shot">
+        <div class="brandline">Artisan Bakery · Chandigarh</div>
+        <h4>Baked fresh every morning, <em>made to be remembered.</em></h4>
+        <p>Slow-fermented sourdough, croissants and celebration cakes — everything leaves the oven the same day it reaches your table.</p>
+        <span class="fake-btn">See Today's Menu</span><span class="fake-btn o">Order a Custom Cake</span>
+        <div class="mini-stats">
+          <div><b>40+</b><span>Items baked daily</span></div>
+          <div><b>4.9 ★</b><span>800+ reviews</span></div>
+          <div><b>6 AM</b><span>First batch out</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-actions">
+      <a class="btn btn-solid" href="assets/bakery-demo.html" target="_blank" rel="noopener">Open the full live demo →</a>
+      <a class="btn btn-ghost" href="#pricing">Get a site like this — from $150</a>
+    </div>
+    <div class="feat-list">
+      <div class="feat"><b>Mobile-first &amp; responsive</b><span>Layouts that reflow cleanly from phone to desktop, with a working mobile menu.</span></div>
+      <div class="feat"><b>Real content, real structure</b><span>Menu, prices, reviews, timings and contact — the sections a small business actually needs.</span></div>
+      <div class="feat"><b>Form validation included</b><span>The demo's contact form checks name, phone and message before it “sends”.</span></div>
+    </div>
+    <h4 style="font-size:19px;margin:32px 0 8px">The full build — watch a website come to life</h4>
+    <p style="color:var(--ink-2);max-width:680px;font-size:15.5px;margin-bottom:18px">The same bakery website, built from a blank page in one fast-motion timelapse: project setup, hand-written code, modern layout and premium typography, sections assembling, smooth motion, a fully responsive mobile view — and the final polished site, live. No voice-over; the soundtrack is a clean, upbeat original instrumental — bright chords, a driving beat and a simple memorable melody, composed for this portfolio, copyright-free and safe to share anywhere.</p>
+    <div style="max-width:980px">
+      <figure class="hero-media" style="margin:0">
+        <video controls preload="metadata" poster="assets/poster-build.jpg" playsinline src="assets/video-build-showcase.mp4" aria-label="Website building showcase timelapse video — a complete website built from a blank page to the finished responsive result, with an original upbeat instrumental soundtrack, by Rohit Rajput"></video>
+        <figcaption><span><b>Website building showcase — the complete timelapse</b></span></figcaption>
+      </figure>
+    </div>
+    <p class="sample-note">Sample project for a fictional business, built to demonstrate the service. Business names, prices and reviews inside the demo are illustrative.</p>
+  </div>
+</section>
+
+<!-- ============ DEMO 2 : AI TOOLS & AUTOMATION ============ -->
+<section class="demo" id="demo-ai">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 02</span>
+      <div>
+        <h3>AI tools &amp; automation — a working support chatbot</h3>
+        <p>This assistant is live, not a screenshot. Ask it about services, prices or delivery times — it answers from a built-in knowledge base, the same setup I build for clients' websites and support inboxes. Tap a suggestion or type your own question.</p>
+      </div>
+    </div>
+    <div class="chat-card">
+      <div class="chat-head">
+        <span class="avatar">R</span>
+        <div><b>Rohit's Demo Assistant</b><span>● Online — replies instantly</span></div>
+      </div>
+      <div class="chat-log" id="chatLog">
+        <div class="msg bot">Hi! I'm the demo assistant. Ask me what a website costs, how fast delivery is, or how to hire Rohit.</div>
+      </div>
+      <div class="chips">
+        <button class="chip" type="button" data-q="What services do you offer?">What services do you offer?</button>
+        <button class="chip" type="button" data-q="How much does a website cost?">Website prices</button>
+        <button class="chip" type="button" data-q="How fast is delivery?">Delivery time</button>
+        <button class="chip" type="button" data-q="How do I hire you?">How to hire</button>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <input id="chatInput" type="text" placeholder="Ask about services, prices, delivery…" autocomplete="off" aria-label="Ask the demo assistant" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="feat-list">
+      <div class="feat"><b>Support chatbots</b><span>FAQ bots for websites that answer routine customer questions instantly, day or night.</span></div>
+      <div class="feat"><b>Content automation</b><span>Repeatable AI workflows for captions, product descriptions and email drafts — reviewed by a human before anything is sent.</span></div>
+      <div class="feat"><b>Spreadsheet automation</b><span>Formulas and cleanup templates that turn hours of manual data work into minutes.</span></div>
+    </div>
+    <p class="sample-note">The assistant runs entirely on this page with a built-in knowledge base — a live demonstration of the chatbot service. For client projects it is connected to the business's own FAQs, catalogue and policies.</p>
+  </div>
+</section>
+
+<!-- ============ DEMO 3 : DESIGN ============ -->
+<section class="demo" id="demo-design">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 03</span>
+      <div>
+        <h3>Design — logos, social posts &amp; thumbnails</h3>
+        <p>AI-assisted design samples for fictional brands, the same process I use for client work: clear message, strong contrast, readable at small sizes, delivered within 24 hours.</p>
+      </div>
+    </div>
+    <div class="gal">
+      <figure>
+        <img src="assets/logo-sample.jpg" alt="BrewKart logo — a brown coffee cup mark with steam, above the word BrewKart" loading="lazy" decoding="async" />
+        <figcaption>
+          <b>Logo — BrewKart coffee brand</b>
+          <p>A clean, warm mark that works on a cup, a signboard or an app icon. Simple shapes, one colour, easy to reproduce.</p>
+          <span class="tagline">Logo design · from $50</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="assets/social-post.jpg" alt="Weekend Sale social media post — sourdough loaves with the text '20% off all sourdough'" loading="lazy" decoding="async" />
+        <figcaption>
+          <b>Social post — bakery weekend sale</b>
+          <p>Appetising photo, big readable headline and one clear offer — the combination that stops the scroll and sells.</p>
+          <span class="tagline">Social media packs · from $150/mo</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="assets/thumbnail.jpg" alt="YouTube thumbnail — bold yellow text 'I Built a Website in 1 HOUR' beside a laptop" loading="lazy" decoding="async" />
+        <figcaption>
+          <b>YouTube thumbnail — tech video</b>
+          <p>Bold title, high contrast and one clear subject. Built to stand out in a crowded feed without looking messy.</p>
+          <span class="tagline">Thumbnails · in every social pack</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="sample-note">Honest samples: AI-assisted designs I created for fictional brands to demonstrate the service — not claimed as hand-drawn or client work.</p>
+  </div>
+</section>
+
+<!-- ============ DEMO 4 : CONTENT WRITING ============ -->
+<section class="demo" id="demo-writing">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 04</span>
+      <div>
+        <h3>Content writing — copy that reads well and sells</h3>
+        <p>Four sample formats I deliver every week: product descriptions, blog writing, social media captions and website copy. Clear, benefit-led, written for the reader first and search engines second.</p>
+      </div>
+    </div>
+    <div class="write-grid">
+      <div class="write-card">
+        <span class="wtag">Sample — product description</span>
+        <h4>Insulated Stainless Steel Water Bottle — 750ml</h4>
+        <p>Ice-cold water at 4 PM, from a bottle you filled at 8 AM. Double-wall vacuum insulation keeps drinks cold for 24 hours (or hot for 12), the powder-coated finish grips without slipping, and the leak-proof cap means it rides in your gym bag, not on it. BPA-free, fits standard cup holders, and rinses clean in seconds.</p>
+      </div>
+      <div class="write-card">
+        <span class="wtag">Sample — blog post opening</span>
+        <h4>5 Signs Your Business Website Is Losing You Customers</h4>
+        <p>Your website is your hardest-working employee — it sells while you sleep. But if it loads slowly, hides your phone number, or hasn't been updated since 2019, it's quietly sending customers to competitors. Here are the five warning signs I check first, and how to fix each one…</p>
+      </div>
+      <div class="write-card">
+        <span class="wtag">Sample — social media caption</span>
+        <h4>Instagram caption, bakery weekend offer</h4>
+        <p class="post-card">Saturday mornings were made for this. 🥐
+
+Fresh sourdough out of the oven at 6 AM — and this weekend only, 20% off every loaf. Come early, the good ones never see noon.
+
+📍 Crumb &amp; Craft, Sector 22
+#FreshBaked #SourdoughSaturday #ChandigarhEats</p>
+      </div>
+      <div class="write-card">
+        <span class="wtag">Sample — website copy</span>
+        <h4>Headline options for a dental clinic</h4>
+        <ul>
+          <li><b>Option A:</b> "Gentle dentistry, honest prices — book your check-up in 2 minutes."</li>
+          <li><b>Option B:</b> "The smile you want, without the bill you fear."</li>
+          <li><b>Option C:</b> "Same-week appointments. Painless treatment. Zero judgement."</li>
+        </ul>
+        <p>Each option pairs with a matching subheading and call-to-action in the delivered draft.</p>
+      </div>
+    </div>
+    <p class="sample-note">Writing samples created for this portfolio. Every client draft is written for their audience and revised until it sounds like them — not like a template.</p>
+  </div>
+</section>
+
+<!-- ============ MID-PAGE SHOWREEL : ORIGINAL SERVICES REEL (moved from hero) ============ -->
+<section class="mid-reel" id="classic-showreel">
+  <div class="wrap">
+    <div class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="sec-tag">Showreel</span>
+      <h2>Original services showreel</h2>
+      <p style="margin-left:auto;margin-right:auto">The first tour of my work — brand strategy, logo design &amp; analytics, in one short reel.</p>
+    </div>
+    <div class="mid-reel-box">
+      <figure class="hero-media" style="margin:0">
+        <video controls preload="metadata" poster="assets/poster-showreel-classic.jpg" playsinline src="assets/showreel-classic.mp4" aria-label="Original brand and services showreel video, by Rohit Rajput"></video>
+        <figcaption><span><b>Original services showreel</b></span><span>0:10 · The classic reel</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO 5 : DATA ENTRY ============ -->
+<section class="demo" id="demo-data">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 05</span>
+      <div>
+        <h3>Data entry — e-commerce product listing sheet</h3>
+        <p>A 15-product listing sheet prepared in upload-ready format: consistent SKUs, SEO descriptions, tags, stock, weights and dimensions. Below are the first rows — expand to see the full sheet structure.</p>
+      </div>
+    </div>
+    <div class="tbl-card">
+      <div class="tbl-scroll">
+        <table>
+          <caption>Product listing sample — 15 products, 9 fields each</caption>
+          <thead>
+            <tr><th>SKU</th><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Tags</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-l="SKU" class="num">SAMPLE-001</td><td data-l="Product" class="strong">Insulated Stainless Steel Water Bottle 750ml</td><td data-l="Category">Sports &amp; Outdoors</td><td data-l="Price" class="num">$24.99</td><td data-l="Stock" class="num">120</td><td data-l="Tags">water bottle, insulated, gym, hiking</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-002</td><td data-l="Product" class="strong">Non-Slip Yoga Mat 6mm with Carry Strap</td><td data-l="Category">Sports &amp; Outdoors</td><td data-l="Price" class="num">$29.99</td><td data-l="Stock" class="num">85</td><td data-l="Tags">yoga mat, fitness, non-slip</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-003</td><td data-l="Product" class="strong">Wireless Bluetooth Earbuds with Charging Case</td><td data-l="Category">Electronics</td><td data-l="Price" class="num">$39.99</td><td data-l="Stock" class="num">200</td><td data-l="Tags">earbuds, bluetooth, wireless, audio</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-004</td><td data-l="Product" class="strong">Ceramic Coffee Mug Set of 4 (350ml)</td><td data-l="Category">Home &amp; Kitchen</td><td data-l="Price" class="num">$27.50</td><td data-l="Stock" class="num">150</td><td data-l="Tags">coffee mug, ceramic, gift set</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-005</td><td data-l="Product" class="strong">Ergonomic Laptop Stand — Adjustable Aluminium</td><td data-l="Category">Office Supplies</td><td data-l="Price" class="num">$34.99</td><td data-l="Stock" class="num">95</td><td data-l="Tags">laptop stand, desk, ergonomic</td></tr>
+          </tbody>
+          <tbody class="more-rows" id="moreProducts">
+            <tr><td data-l="SKU" class="num">SAMPLE-006</td><td data-l="Product" class="strong">Organic Cotton Tote Bag — Pack of 2</td><td data-l="Category">Fashion</td><td data-l="Price" class="num">$18.99</td><td data-l="Stock" class="num">300</td><td data-l="Tags">tote bag, cotton, reusable, eco</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-007</td><td data-l="Product" class="strong">LED Desk Lamp with Wireless Charging Base</td><td data-l="Category">Home &amp; Kitchen</td><td data-l="Price" class="num">$45.00</td><td data-l="Stock" class="num">60</td><td data-l="Tags">desk lamp, LED, wireless charging</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-008</td><td data-l="Product" class="strong">Stainless Steel Kitchen Knife Set 6-Piece</td><td data-l="Category">Home &amp; Kitchen</td><td data-l="Price" class="num">$59.99</td><td data-l="Stock" class="num">70</td><td data-l="Tags">knife set, kitchen, cooking, steel</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-009</td><td data-l="Product" class="strong">Resistance Bands Set of 5 with Door Anchor</td><td data-l="Category">Sports &amp; Outdoors</td><td data-l="Price" class="num">$19.99</td><td data-l="Stock" class="num">180</td><td data-l="Tags">resistance bands, workout, home gym</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-010</td><td data-l="Product" class="strong">Bamboo Cutting Board Set of 3</td><td data-l="Category">Home &amp; Kitchen</td><td data-l="Price" class="num">$22.99</td><td data-l="Stock" class="num">140</td><td data-l="Tags">cutting board, bamboo, kitchen</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-011</td><td data-l="Product" class="strong">Portable Bluetooth Speaker IPX7 Waterproof</td><td data-l="Category">Electronics</td><td data-l="Price" class="num">$49.99</td><td data-l="Stock" class="num">110</td><td data-l="Tags">speaker, bluetooth, waterproof</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-012</td><td data-l="Product" class="strong">Men's Running Shoes — Lightweight Mesh (UK 7–11)</td><td data-l="Category">Fashion</td><td data-l="Price" class="num">$54.99</td><td data-l="Stock" class="num">90</td><td data-l="Tags">running shoes, men, trainers</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-013</td><td data-l="Product" class="strong">Aromatherapy Essential Oil Diffuser 500ml</td><td data-l="Category">Home &amp; Kitchen</td><td data-l="Price" class="num">$32.99</td><td data-l="Stock" class="num">75</td><td data-l="Tags">diffuser, essential oil, aromatherapy</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-014</td><td data-l="Product" class="strong">Kids Educational Building Blocks 120-Piece</td><td data-l="Category">Toys</td><td data-l="Price" class="num">$26.99</td><td data-l="Stock" class="num">160</td><td data-l="Tags">building blocks, kids, STEM</td></tr>
+            <tr><td data-l="SKU" class="num">SAMPLE-015</td><td data-l="Product" class="strong">Travel Backpack 40L with USB Port &amp; Rain Cover</td><td data-l="Category">Fashion</td><td data-l="Price" class="num">$64.99</td><td data-l="Stock" class="num">55</td><td data-l="Tags">backpack, travel, laptop bag</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="toggle-btn" id="toggleProducts" aria-expanded="false">Show all 15 products</button>
+    </div>
+    <p class="sample-note">Every row in the full sheet also carries an SEO short description, weight and dimensions — the fields marketplaces actually require at upload. Sample data, prepared to demonstrate format and accuracy.</p>
+  </div>
+</section>
+
+<!-- ============ DEMO 6 : RESEARCH ============ -->
+<section class="demo" id="demo-research">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 06</span>
+      <div>
+        <h3>Web research — reports with a recommendation</h3>
+        <p>A sample research brief: five affordable email marketing tools for small businesses, compared on price, free-plan limits and automation — with a clear recommendation, not just raw data.</p>
+      </div>
+    </div>
+    <div class="tbl-card">
+      <div class="tbl-scroll">
+        <table>
+          <caption>Sample report — email marketing tools compared (Oct 2026)</caption>
+          <thead>
+            <tr><th>Tool</th><th>Free plan</th><th>Paid starts</th><th>Free contacts</th><th>Best for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-l="Tool" class="strong">MailerLite</td><td data-l="Free plan"><span class="pill green">Yes</span></td><td data-l="Paid starts" class="num">$10/mo</td><td data-l="Free contacts" class="num">1,000</td><td data-l="Best for">Beginners, tight budgets</td></tr>
+            <tr><td data-l="Tool" class="strong">Brevo</td><td data-l="Free plan"><span class="pill green">Yes</span></td><td data-l="Paid starts" class="num">$19/mo</td><td data-l="Free contacts" class="num">Unlimited</td><td data-l="Best for">Growing lists, automation</td></tr>
+            <tr><td data-l="Tool" class="strong">Mailchimp</td><td data-l="Free plan"><span class="pill green">Yes</span></td><td data-l="Paid starts" class="num">$13/mo</td><td data-l="Free contacts" class="num">500</td><td data-l="Best for">Brand templates</td></tr>
+            <tr><td data-l="Tool" class="strong">ConvertKit</td><td data-l="Free plan"><span class="pill green">Yes</span></td><td data-l="Paid starts" class="num">$29/mo</td><td data-l="Free contacts" class="num">1,000</td><td data-l="Best for">Creators</td></tr>
+            <tr><td data-l="Tool" class="strong">Zoho Campaigns</td><td data-l="Free plan"><span class="pill green">Yes</span></td><td data-l="Paid starts" class="num">$3/mo</td><td data-l="Free contacts" class="num">2,000</td><td data-l="Best for">Zoho users, lowest price</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="rec">
+      <h4>Recommendation from the report</h4>
+      <p>For a small business sending under 12,000 emails a month: <b>start with MailerLite free</b> — the most generous free plan (1,000 contacts, 12,000 emails/month) with the simplest editor. Move to Brevo when the list grows and automation matters.</p>
+      <div class="findings">
+        <div><b>Cheapest paid plan</b>Zoho Campaigns at $3/mo — ideal if the business already uses Zoho.</div>
+        <div><b>Best free automation</b>Brevo includes basic automation even on its free tier.</div>
+        <div><b>Easiest to use</b>MailerLite and Mailchimp — drag-and-drop editors, ready templates.</div>
+        <div><b>Watch out</b>Mailchimp's free plan has shrunk to 500 contacts — verify limits before committing.</div>
+      </div>
+    </div>
+    <div class="tbl-card" style="margin-top:22px">
+      <div class="tbl-scroll">
+        <table>
+          <caption>VA sample — organised lead list</caption>
+          <p class="tbl-sub">The kind of clean, status-tracked sheet I maintain for clients: every lead with contact, city, status and next step.</p>
+          <thead>
+            <tr><th>Name</th><th>Company</th><th>City</th><th>Status</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-l="Name" class="strong">Aarav Mehta</td><td data-l="Company">Mehta Textiles</td><td data-l="City">Surat</td><td data-l="Status"><span class="pill">New</span></td><td data-l="Notes">Interested in bulk pricing</td></tr>
+            <tr><td data-l="Name" class="strong">Priya Nair</td><td data-l="Company">Nair Foods</td><td data-l="City">Kochi</td><td data-l="Status"><span class="pill">Contacted</span></td><td data-l="Notes">Asked for catalogue</td></tr>
+            <tr><td data-l="Name" class="strong">Rahul Verma</td><td data-l="Company">Verma Electronics</td><td data-l="City">Delhi</td><td data-l="Status"><span class="pill">Follow-up</span></td><td data-l="Notes">Wants demo next week</td></tr>
+            <tr><td data-l="Name" class="strong">Sneha Kulkarni</td><td data-l="Company">Kulkarni Designs</td><td data-l="City">Pune</td><td data-l="Status"><span class="pill">New</span></td><td data-l="Notes">Referred by Aarav</td></tr>
+            <tr><td data-l="Name" class="strong">Amit Singh</td><td data-l="Company">Singh Logistics</td><td data-l="City">Ludhiana</td><td data-l="Status"><span class="pill green">Qualified</span></td><td data-l="Notes">Ready for proposal</td></tr>
+            <tr><td data-l="Name" class="strong">Kavya Reddy</td><td data-l="Company">Reddy Organics</td><td data-l="City">Hyderabad</td><td data-l="Status"><span class="pill">Contacted</span></td><td data-l="Notes">Price-sensitive</td></tr>
+            <tr><td data-l="Name" class="strong">Vikram Joshi</td><td data-l="Company">Joshi Hardware</td><td data-l="City">Ahmedabad</td><td data-l="Status"><span class="pill">New</span></td><td data-l="Notes">Cold lead</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="sample-note">Sample report and sample lead data, prepared to demonstrate research format and spreadsheet organisation. Contact details are omitted from samples on purpose.</p>
+  </div>
+</section>
+
+<!-- ============ DEMO 7 : VIRTUAL ASSISTANT ============ -->
+<section class="demo" id="demo-va">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 07</span>
+      <div>
+        <h3>Virtual assistance — email, scheduling &amp; admin</h3>
+        <p>The everyday work that eats a business owner's week: drafted emails, a planned schedule, an organised inbox. Two samples below — an email drafted for a client, and the weekly plan I work from.</p>
+      </div>
+    </div>
+    <div class="write-grid">
+      <div class="write-card">
+        <span class="wtag">Sample — email draft</span>
+        <p class="mail-meta"><b>To:</b> client@example.com<br /><b>Subject:</b> Following up — proposal for your website redesign</p>
+        <p>Hi Sarah,</p>
+        <p>Thank you for speaking with us on Tuesday. As discussed, I've attached the proposal for your website redesign, including the timeline and the two design directions we shortlisted.</p>
+        <p>If the scope looks right, we can start this week — the first draft would be ready by Friday. Happy to adjust anything before we begin.</p>
+        <p>Best regards,<br />[Your name]</p>
+      </div>
+      <div class="write-card">
+        <span class="wtag">Sample — inbox organisation</span>
+        <h4>How I triage a busy inbox</h4>
+        <ul>
+          <li><b>Reply today</b> — customer questions and anything blocking a sale</li>
+          <li><b>Needs your decision</b> — flagged with a one-line summary, so you decide in seconds</li>
+          <li><b>Scheduled</b> — follow-ups set for the right day, never lost</li>
+          <li><b>Filed</b> — receipts, invoices and records archived with clear labels</li>
+        </ul>
+        <p>You get a short end-of-day summary: what was answered, what needs you, what's pending.</p>
+      </div>
+    </div>
+    <div class="tbl-card" style="margin-top:22px">
+      <div class="tbl-scroll">
+        <table>
+          <caption>Sample VA week — how support hours are used</caption>
+          <thead>
+            <tr><th>Day</th><th>Focus</th><th>Typical tasks</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-l="Day" class="strong">Monday</td><td data-l="Focus">Inbox &amp; planning</td><td data-l="Typical tasks">Clear weekend inbox, plan the week's tasks, confirm appointments</td></tr>
+            <tr><td data-l="Day" class="strong">Tuesday</td><td data-l="Focus">Data &amp; documents</td><td data-l="Typical tasks">Update CRM and spreadsheets, format documents, file invoices</td></tr>
+            <tr><td data-l="Day" class="strong">Wednesday</td><td data-l="Focus">Research</td><td data-l="Typical tasks">Lead research, competitor checks, collect data for reports</td></tr>
+            <tr><td data-l="Day" class="strong">Thursday</td><td data-l="Focus">Follow-ups</td><td data-l="Typical tasks">Send follow-up emails, chase pending replies, update task tracker</td></tr>
+            <tr><td data-l="Day" class="strong">Friday</td><td data-l="Focus">Wrap-up</td><td data-l="Typical tasks">Weekly summary report, organise files, prep next week's calendar</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="sample-note">Sample email and schedule written for a fictional client to demonstrate format and tone. Real client inboxes and documents are always kept private.</p>
+  </div>
+</section>
+
+<!-- ============ DEMO 8 : WEB3 & CRYPTO ============ -->
+<section class="demo" id="demo-web3">
+  <div class="wrap">
+    <div class="demo-head">
+      <span class="n">DEMO 08</span>
+      <div>
+        <h3>Web3 &amp; crypto — research &amp; community content</h3>
+        <p>Structured project research for Web3 teams and communities: what a project does, how its token works, what to verify before trusting it, and the red flags to check — plus community posts written in plain, natural language.</p>
+      </div>
+    </div>
+    <div class="tbl-card">
+      <div class="tbl-scroll">
+        <table>
+          <caption>Sample format — project research snapshot</caption>
+          <p class="tbl-sub">The structure I use for every project brief. Shown with a fictional project so the format is clear without presenting anyone's live data.</p>
+          <thead>
+            <tr><th>Check</th><th>What I verify</th><th>Sample finding</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-l="Check" class="strong">Basics</td><td data-l="What I verify">What the project does, which chain, live product or just a whitepaper</td><td data-l="Sample finding">SampleChain (fictional) — Layer-1, testnet live, mainnet announced</td></tr>
+            <tr><td data-l="Check" class="strong">Token utility</td><td data-l="What I verify">Why the token exists: fees, staking, governance, rewards</td><td data-l="Sample finding">Gas + staking; governance planned but not yet active</td></tr>
+            <tr><td data-l="Check" class="strong">Supply &amp; vesting</td><td data-l="What I verify">Total supply, team/investor allocations, unlock schedule on the explorer</td><td data-l="Sample finding">Team tokens locked 12 months, then linear — verified on-chain</td></tr>
+            <tr><td data-l="Check" class="strong">Activity signals</td><td data-l="What I verify">Active addresses, developer activity, ecosystem grants and partners</td><td data-l="Sample finding">Steady testnet usage; small but real developer community</td></tr>
+            <tr><td data-l="Check" class="strong">Red flags</td><td data-l="What I verify">Anonymous team, unaudited contracts, unlocked insider tokens, copied whitepaper</td><td data-l="Sample finding">Contracts unaudited at time of writing — flagged clearly in the brief</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="write-grid" style="margin-top:22px">
+      <div class="write-card">
+        <span class="wtag">Sample — community post</span>
+        <h4>Announcement post for a project community</h4>
+        <p class="post-card">Testnet is live and the faucet is open.
+
+No token sale, no paid entry — just try the network, break things, and tell us what happened. The best bug reports this week get featured in Friday's community call.
+
+Guide is pinned in the announcements channel. See you there.</p>
+      </div>
+      <div class="write-card">
+        <span class="wtag">What every brief includes</span>
+        <h4>Research deliverables</h4>
+        <ul>
+          <li><b>Project snapshot</b> — the table above, filled with verified findings and sources</li>
+          <li><b>Token check</b> — supply, vesting, holder concentration, contract status</li>
+          <li><b>Risk list</b> — red flags stated plainly, never buried</li>
+          <li><b>Community content</b> — announcements, explainers and FAQ posts in natural English</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sample-note">Sample research format with a fictional project — research and content only, never financial advice. Real briefs cite the explorer, docs and sources behind every finding.</p>
+  </div>
+</section>
+</main>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing-sec" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">Pricing</span>
+      <h2>Clear packages, no surprises</h2>
+      <p>Fixed deliverables, fixed prices, in USD. Every package includes the revision rounds listed — and I confirm the exact scope with you before any work starts.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pkg">
+        <div class="svc-name">Website</div>
+        <h3>Starter Landing Page</h3>
+        <div class="price">$150</div>
+        <div class="deliv">Delivered in 5 days</div>
+        <ul>
+          <li>1-page professional landing page</li>
+          <li>Mobile responsive design</li>
+          <li>Contact form with validation</li>
+          <li>Basic SEO setup</li>
+          <li>2 revision rounds</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg pop">
+        <span class="pop-tag">Most popular</span>
+        <div class="svc-name">Website</div>
+        <h3>Professional Website</h3>
+        <div class="price">$350</div>
+        <div class="deliv">Delivered in 10 days</div>
+        <ul>
+          <li>Up to 5 pages — Home, About, Services, Gallery, Contact</li>
+          <li>Custom design in your brand colours</li>
+          <li>WhatsApp chat button + Google Maps</li>
+          <li>SEO basics + speed optimisation</li>
+          <li>3 revision rounds</li>
+        </ul>
+        <a class="btn btn-solid" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Website</div>
+        <h3>Premium Website</h3>
+        <div class="price">$750</div>
+        <div class="deliv">Delivered in 21 days</div>
+        <ul>
+          <li>Up to 10 pages + blog setup</li>
+          <li>Advanced animations &amp; interactions</li>
+          <li>Hindi / English bilingual option</li>
+          <li>1 month of free support</li>
+          <li>Unlimited revisions within scope</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Logo &amp; Brand</div>
+        <h3>Logo Design</h3>
+        <div class="price">$50 <small>starter</small></div>
+        <div class="deliv">Delivered in 3 days</div>
+        <ul>
+          <li>1 logo concept, 2 variations</li>
+          <li>PNG + JPG files</li>
+          <li>2 revision rounds</li>
+          <li>Pro tier ($120): 3 concepts + vector source files</li>
+          <li>Premium ($250): full mini brand kit</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg pop">
+        <span class="pop-tag">Most popular — monthly</span>
+        <div class="svc-name">Social Media</div>
+        <h3>Content Pack — Monthly</h3>
+        <div class="price">$350 <small>/month</small></div>
+        <div class="deliv">Monthly delivery, in batches</div>
+        <ul>
+          <li>20 post graphics + 8 story designs</li>
+          <li>Captions + hashtags included</li>
+          <li>2 revision rounds per batch</li>
+          <li>Starter ($150/mo): 12 posts</li>
+          <li>Premium ($600/mo): 30 posts + content calendar</li>
+        </ul>
+        <a class="btn btn-solid" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Data Entry</div>
+        <h3>Data Cleaning</h3>
+        <div class="price">$120 <small>pro tier</small></div>
+        <div class="deliv">Delivered in 5 days</div>
+        <ul>
+          <li>Up to 2,000 rows: entry + cleaning + validation</li>
+          <li>Summary report of fixes applied</li>
+          <li>2 revision rounds</li>
+          <li>Starter ($50): up to 500 rows</li>
+          <li>Premium ($300): 10,000 rows + charts</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Research</div>
+        <h3>Research Report</h3>
+        <div class="price">$150 <small>pro tier</small></div>
+        <div class="deliv">Delivered in 7 days</div>
+        <ul>
+          <li>Report up to 25 pages, sources cited</li>
+          <li>Comparison tables + key findings</li>
+          <li>Clear recommendations, not raw data</li>
+          <li>Starter ($60): 10-page brief</li>
+          <li>Premium ($350): 50 pages + data appendix</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Virtual Assistant</div>
+        <h3>VA — Monthly Support</h3>
+        <div class="price">$400 <small>/month · 30 hrs</small></div>
+        <div class="deliv">Ongoing, weekly summary included</div>
+        <ul>
+          <li>Email management &amp; drafting</li>
+          <li>Web research + spreadsheet organisation</li>
+          <li>CRM data updates &amp; documents</li>
+          <li>Starter ($150/mo): 10 hours</li>
+          <li>Premium ($800/mo): 60 hours + priority support</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Custom Work</div>
+        <h3>Hourly — Anything Else</h3>
+        <div class="price">$15 <small>/hour</small></div>
+        <div class="deliv">2-hour minimum</div>
+        <ul>
+          <li>Web3 &amp; crypto research tasks</li>
+          <li>Community moderation support</li>
+          <li>AI-assisted content writing</li>
+          <li>One-off fixes and small tasks</li>
+          <li>Scope confirmed before we start</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">Content Writing</div>
+        <h3>Content Pack</h3>
+        <div class="price">$120 <small>pro tier</small></div>
+        <div class="deliv">Delivered in 5 days</div>
+        <ul>
+          <li>2 blog posts (up to 1,000 words each)</li>
+          <li>10 product descriptions or social captions</li>
+          <li>Written for your audience, SEO basics included</li>
+          <li>Starter ($60): 5 descriptions or 10 captions</li>
+          <li>Premium ($250/mo): 4 blogs + full caption set</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+      <div class="pkg">
+        <div class="svc-name">AI &amp; Automation</div>
+        <h3>Website Chatbot Setup</h3>
+        <div class="price">$200 <small>pro tier</small></div>
+        <div class="deliv">Delivered in 7 days</div>
+        <ul>
+          <li>FAQ chatbot built on your business info — like Demo 02</li>
+          <li>Up to 40 questions &amp; answers</li>
+          <li>Installed on your website, in your branding</li>
+          <li>Starter ($120): 20 Q&amp;As, standard design</li>
+          <li>Premium ($400): 100 Q&amp;As + lead capture</li>
+        </ul>
+        <a class="btn btn-ghost" href="#hire">Start a project</a>
+      </div>
+    </div>
+    <p class="hourly">Need something small and urgent? Quick tasks are turned around within <span>12–15 hours</span> of confirmation whenever possible — larger projects follow the delivery time on each package above.</p>
+    <p class="price-note">Payment through the platform you hire me on (escrow protected), Contra, or LaborX (crypto). No advance payment outside a platform, ever.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">How it works</span>
+      <h2>From first message to delivery</h2>
+      <p>Simple, transparent, and fast. You always know what happens next.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="sn">STEP 1</span><h3>Message me</h3><p>Tell me what you need on any platform below, or by email. I reply with questions and a clear quote — no vague estimates.</p></div>
+      <div class="step"><span class="sn">STEP 2</span><h3>Free demo first</h3><p>For design and content work, I prepare a sample before you commit, so you can judge the quality yourself.</p></div>
+      <div class="step"><span class="sn">STEP 3</span><h3>Work &amp; updates</h3><p>I complete the work within the time promised for your package — small tasks often inside 12–15 hours — and keep you updated as it progresses.</p></div>
+      <div class="step"><span class="sn">STEP 4</span><h3>Review &amp; delivery</h3><p>You review the final files, I apply your revision rounds, and payment stays protected by the platform's escrow until you approve.</p></div>
+    </div>
+    <div class="skills">
+      <span>Live Chat Support</span><span>Lead Qualification</span><span>Community Moderation</span><span>CRM Data Entry</span><span>Responsive Website Design</span><span>Social Media Strategy</span><span>Web3 / Crypto Operations</span><span>Online Research</span><span>AI Tools &amp; Prompting</span><span>Clear Written Communication</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">Reviews</span>
+      <h2>The standard clients can expect</h2>
+      <p>Sample reviews for the demonstration projects on this page — the quality bar every paid project is held to.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"The landing page was exactly what our bakery needed — clean, fast, and the contact form actually works. Delivered before the promised date."</p>
+        <b>Sample client — artisan bakery</b>
+        <span>Website project · see Demo 01</span>
+      </div>
+      <div class="rev">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"Logo and a month of social posts sorted in one go. Everything matched our brand colours, and the captions were ready to copy and paste."</p>
+        <b>Sample client — coffee brand</b>
+        <span>Logo &amp; social pack · see Demo 03</span>
+      </div>
+      <div class="rev">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"2,000 rows cleaned and deduplicated, with a clear report of everything that was fixed. The file uploaded to our store with zero errors."</p>
+        <b>Sample client — online store</b>
+        <span>Data cleaning · see Demo 05</span>
+      </div>
+    </div>
+    <p class="sample-note">These are sample reviews written for the fictional demo projects above, included so you can judge the standard of work. Verified client reviews will appear on my Contra, Upwork and Freelancer profiles as paid projects complete.</p>
+  </div>
+</section>
+
+<!-- ============ HIRE ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="hire" id="hire">
+      <h2>Let's build something for your business</h2>
+      <p>Hire me on whichever platform you prefer — every profile below is mine, with the same rates and the same demos you just saw.</p>
+      <div class="hire-links">
+        <a class="primary" href="https://contra.com/rohit_rajput" target="_blank" rel="noopener">Hire on Contra</a>
+        <a href="https://www.upwork.com/freelancers/~013a8de7995979cb05" target="_blank" rel="noopener">Upwork</a>
+        <a href="https://www.freelancer.com/u/itsrohitrajput" target="_blank" rel="noopener">Freelancer.com</a>
+        <a href="https://www.truelancer.com/freelancer/mylove02" target="_blank" rel="noopener">Truelancer</a>
+      </div>
+      <p class="mail">Or write to me directly: <a href="mailto:xyzcryp0@gmail.com">xyzcryp0@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Rohit Rajput · Digital Specialist — AI Operations · Customer Support · Based in India, working worldwide (UTC +5:30)</p>
+    <p style="margin-top:6px">All demos on this page are samples created to demonstrate my services.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('toggleProducts');
+  var more = document.getElementById('moreProducts');
+  if (!btn || !more) return;
+  btn.addEventListener('click', function(){
+    var open = more.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Show fewer products' : 'Show all 15 products';
+  });
+})();
+</script>
+<script>
+(function(){
+  var log = document.getElementById('chatLog');
+  var form = document.getElementById('chatForm');
+  var input = document.getElementById('chatInput');
+  if (!log || !form || !input) return;
+  function add(text, who){
+    var d = document.createElement('div');
+    d.className = 'msg ' + who;
+    d.textContent = text;
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+  }
+  function reply(q){
+    var t = q.toLowerCase();
+    if (/(hello|hi|hey|namaste)/.test(t) && t.length < 30)
+      return "Hello! I'm the demo assistant Rohit built to show how a support chatbot works. Ask me about services, prices or delivery times.";
+    if (/(price|cost|charge|rate|much|package)/.test(t)){
+      if (/(website|site|landing)/.test(t))
+        return "A landing page starts at $150, a full 5-page website is $350, and premium sites with blog setup are $750. Every package includes revision rounds — full details are in the Pricing section below.";
+      if (/(logo|design|social)/.test(t))
+        return "Logo design starts at $50 for one concept with two variations. Social media content packs run $150–$600/month depending on how many posts you need.";
+      if (/(data|spreadsheet|excel|sheet)/.test(t))
+        return "Data cleaning starts at $50 for up to 500 rows. The $120 Pro tier covers 2,000 rows and includes a summary report of every fix applied.";
+      if (/(chatbot|bot|automation)/.test(t))
+        return "A website chatbot like this one starts at $120 for 20 questions and answers. The $200 Pro setup covers 40 Q&As installed on your site in your branding.";
+      if (/(writ|content|blog|caption)/.test(t))
+        return "Content writing starts at $60 — that's 5 product descriptions or 10 social captions. Blog posts are in the $120 Content Pack.";
+      return "Quick price guide: websites from $150, logos from $50, data cleaning from $50, research reports from $60, content from $60, chatbots from $120, and general work at $15/hour. The Pricing section below has every package.";
+    }
+    if (/(deliver|fast|long|deadline|urgent|time)/.test(t))
+      return "Small tasks are usually turned around within 12–15 hours of confirmation. Bigger projects follow the package timeline — logos 3 days, landing pages 5 days, full websites 10 days.";
+    if (/(hire|contact|start|order|email|book)/.test(t))
+      return "You can hire Rohit on Contra, Upwork, Freelancer.com or Truelancer — the links are in the Hire section at the bottom of this page — or email xyzcryp0@gmail.com. Payment stays in the platform's escrow until you approve the work.";
+    if (/(web3|crypto|blockchain|token)/.test(t))
+      return "For Web3 work, Rohit prepares project research briefs, token checks and community content. Demo 08 below shows the exact format, including how red flags are reported.";
+    if (/(service|offer|what do you do|work)/.test(t))
+      return "Rohit offers website development, AI chatbots & automation, logo & social media design, content writing, data entry & cleaning, web research, virtual assistance, and Web3/crypto research. Every service has a live demo or sample on this page.";
+    if (/(data|entry|research|assistant|virtual|va)/.test(t))
+      return "Data and VA work covers product listings, spreadsheet cleaning, lead lists, research reports with sources, email drafting and inbox organisation. Demos 05, 06 and 07 show real samples of each.";
+    if (/(thank|great|nice|good)/.test(t))
+      return "You're welcome! If you'd like this kind of assistant on your own website, the Chatbot Setup package in Pricing is the place to start.";
+    return "Good question — this demo bot only knows Rohit's services, prices and delivery times. Try asking \"How much does a website cost?\" or tap one of the suggestions above. For anything else, email xyzcryp0@gmail.com.";
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = input.value.trim();
+    if (!v) return;
+    add(v, 'user');
+    input.value = '';
+    setTimeout(function(){ add(reply(v), 'bot'); }, 350);
+  });
+  var chips = document.querySelectorAll('.chip');
+  for (var i = 0; i < chips.length; i++){
+    chips[i].addEventListener('click', function(){
+      var q = this.getAttribute('data-q');
+      add(q, 'user');
+      setTimeout(function(){ add(reply(q), 'bot'); }, 350);
+    });
+  }
+})();
+</script>
+</body>
+</html>
